@@ -2,11 +2,10 @@ const APP_PREFIX = 'BudgetTracker-';
 const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION
 const FILES_TO_CACHE = [
-  "./public/index.html",
-  "./public/css/style.css",
-  "./public/js/index.js",
-  "./models/transaction.js",
-  ".public/js/idb.js"
+  "./index.html",
+  "./css/styles.css",
+  "./js/index.js",
+  "./js/idb.js"
 ];
 
 // Respond with cached resources
@@ -19,13 +18,13 @@ self.addEventListener('fetch', function (e) {
         return request
       } else {       // if there are no cache, try fetching request
         console.log('file is not cached, fetching : ' + e.request.url)
-        return fetch(e.request)
+        return fetch(e.request);
       }
 
       // return request || fetch(e.request)
     })
   )
-})
+});
 
 // Cache resources
 self.addEventListener('install', function (e) {
@@ -35,7 +34,7 @@ self.addEventListener('install', function (e) {
       return cache.addAll(FILES_TO_CACHE)
     })
   )
-})
+});
 
 // Delete outdated caches
 self.addEventListener('activate', function (e) {
