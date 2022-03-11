@@ -2,12 +2,11 @@ const APP_PREFIX = 'BudgetTracker-';
 const VERSION = 'version_01';
 const CACHE_NAME = APP_PREFIX + VERSION
 const FILES_TO_CACHE = [
-  "./index.html",
-  "./css/style.css",
-  "./dist/app.bundle.js",
-  "./dist/events.bundle.js",
-  "./dist/tickets.bundle.js",
-  "./dist/schedule.bundle.js"
+  "./public/index.html",
+  "./public/css/style.css",
+  "./public/js/index.js",
+  "./models/transaction.js",
+  ".public/js/idb.js"
 ];
 
 // Respond with cached resources
@@ -23,7 +22,6 @@ self.addEventListener('fetch', function (e) {
         return fetch(e.request)
       }
 
-      // You can omit if/else for console.log & put one line below like this too.
       // return request || fetch(e.request)
     })
   )
