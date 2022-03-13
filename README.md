@@ -2,6 +2,8 @@
 
 [![MIT license](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+![image](https://user-images.githubusercontent.com/90581274/158076801-3864986a-094c-482c-a143-66983d1c496d.png)
+
   ## Description 
   
    This project is a demonstration of how to create and take advantage of the offline capabilities of a Progressive Web Application. Using this application, a user could enter the website, and should their connection be interrupted, they would not have to fear their data being lost.
